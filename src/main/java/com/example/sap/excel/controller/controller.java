@@ -37,7 +37,7 @@ public class controller implements WebMvcConfigurer {
         String stringParam = param.getExcelStringData();
 
         JSONArray jsonArray = new JSONArray(stringParam);
-
+        JSONArray jsonArray1 = new JSONArray(stringParam);
 
 
         //TestDto testDto = new TestDto();

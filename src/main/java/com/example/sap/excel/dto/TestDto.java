@@ -1,8 +1,10 @@
 package com.example.sap.excel.dto;
 
-import groovy.transform.ToString;
+
+import lombok.ToString;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @ToString
 @Getter

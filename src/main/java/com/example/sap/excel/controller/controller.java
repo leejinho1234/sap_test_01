@@ -3,6 +3,7 @@ package com.example.sap.excel.controller;
 
 import com.example.sap.excel.dto.ExcelDto;
 import com.example.sap.excel.dto.TestDto;
+import com.example.sap.excel.service.ExcelService;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import org.apache.tomcat.util.json.JSONParser;
@@ -31,15 +32,17 @@ public class controller implements WebMvcConfigurer {
     }
     @PostMapping("/home/test")
     public String homeTest(TestDto param) throws IOException {
-
         //String stringParam = param.getExcelStringData();
-        List<TestDto> list = new ArrayList<>();
-        String stringParam = param.getExcelStringData();
+        //List<TestDto> list = new ArrayList<>();
+        //String stringParam = param.getExcelStringData();
+        //System.out.println("Controller : " + stringParam);
+        ExcelService excelService = new ExcelService();
+        excelService.ExcelSer(param);
 
-        JSONArray jsonArray = new JSONArray(stringParam);
-        JSONArray jsonArray1 = new JSONArray(stringParam);
+        //JSONArray jsonArray = new JSONArray(stringParam);
+        //JSONArray jsonArray2 = new JSONArray(stringParam);
 
-
+        /*
         //TestDto testDto = new TestDto();
         List<TestDto> testDto = new ArrayList<>();
         for (int i = 0; i < jsonArray.length(); i++){
@@ -49,7 +52,9 @@ public class controller implements WebMvcConfigurer {
 
             testDto.add(testDto_a);
         }
-        System.out.println(testDto);
+        */
+
+
 
 
 
@@ -59,7 +64,7 @@ public class controller implements WebMvcConfigurer {
         //}
         //System.out.println("TestDto : " + TestDto.toString());
 
-        return "";
+        return "excel/test";
     }
 
 

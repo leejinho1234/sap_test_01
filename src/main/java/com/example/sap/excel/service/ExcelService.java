@@ -20,6 +20,9 @@ public class ExcelService {
         JSONArray jsonArray = new JSONArray(stringParam);
         Gson gson = new Gson();
         List<TestDto> testDto = gson.fromJson(stringParam, new TypeToken<List<TestDto>>(){}.getType());
+        RestAPIService restAPIService = new RestAPIService();
+        restAPIService.PostAPI(testDto);
+
 
         System.out.println(testDto);
     }

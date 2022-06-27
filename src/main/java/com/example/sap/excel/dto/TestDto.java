@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class TestDto {
 
     private String excelStringData;
-    private int  ZID;
-    private String ZItemSeq;
+    private String  ZID;
+    private int ZItemSeq;
     private String ZItemDes;
 }

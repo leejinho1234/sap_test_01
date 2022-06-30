@@ -13,9 +13,9 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
-
+/*
 public class RestAPIService {
-    HttpURLConnection conn = null;
+    //HttpURLConnection conn = null;
     JSONObject responseJson = null;
 
     public void PostAPI(List<TestDto> testDto){
@@ -48,7 +48,6 @@ public class RestAPIService {
                     String line = "";
                     while((line = br.readLine()) != null){
                         sb.append(line);
-                        System.out.println("while문 : " + line);
                     }
                     responseJson = new JSONObject(sb.toString());
                 }
@@ -59,4 +58,4 @@ public class RestAPIService {
         }
     }
 }
-
+*/
